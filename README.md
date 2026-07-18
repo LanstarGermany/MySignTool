@@ -7,3 +7,30 @@ a valid Code Signing certificate, either from a Public CA like Digicert or from 
 Compile: 
 load the source, choose Release X64, then copy the files to a directory of your choice.
 no installation neccessary afterwards.
+
+Supported file extensions can be signed:
+* .application
+* .appx
+* .appxbundle
+* .cab
+* .cat
+* .cdxml
+* .cpl
+* .dll
+* .exe
+* .manifest
+* .msi
+* .msix
+* .msixbundle
+* .msp
+* .mst
+* .ocx
+* .ps1
+* .ps1xml
+* .psd1
+* .psm1
+* .pssc
+* .rdp
+* .scr
+* .sys
+* .xaml
