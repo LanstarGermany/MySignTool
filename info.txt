@@ -1,0 +1,54 @@
+Auf keinen Fall sollte die Software auf Basis der GPL (General Public License) oder ähnlicher, z.B. Open Source basierender Lizenzmodelle vertrieben werden. Diese schließen nämlich teilweise den Verkauf, also die kommerzielle Vermarktung der Software aus. Beim veröffentlichen muss man neben dem Haftungsausschluss und einer entsprechenden Lizenz unter der man die Software veröffentlicht auch darauf achten das man seinen vollständigen Namen sowie die Anschrift mit angibt. Dies kann entweder im Programm selbst oder in einer beigefügten Readme.txt erfolgen.
+ 
+Weitere wissenswerte Informationen gibt es bei der deutschen Shareware Autoren Vereinigung
+ http://www.s-a-ve.com
+ 
+Veröffentlichen kann man selbst erstellte Tools und Programme auf den folgenden Webseiten:
+ http://www.softonic.com
+ http://www.zdnet.de/
+ http://www.upload.de/
+ http://www.shareware.de/
+
+
+
+
+Paypal Links
+--------------
+
+Cancel:     http://www.lanstar.info/cancelrequest.html
+Download:   http://www.lanstar.info/downloads/signtool.zip
+PayLink:    https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S6YPPFDTRPWP2 
+Test:       https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GXZ4RFGZRUM88
+
+
+
+
+
+- homepage anpassen
+
+
+
+
+
+
+
+timestamp server urls
+http://timestamp.verisign.com/scripts/timstamp.dll
+http://www.trustcenter.de/codesigning/timestamp
+http://tsa.starfieldtech.com
+https://timestamp.geotrust.com/tsa
+http://timestamp.globalsign.com/scripts/timstamp.dll
+http://timestamp.comodoca.com/authenticode 
+
+
+
+
+
+
+
+
+
+
+
+
+
