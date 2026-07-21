@@ -9,7 +9,7 @@ Compile:
 load the source, choose Release X64, then copy the files to a directory of your choice.
 no installation neccessary afterwards. After compilation, save all files in a folder, then just start signtool.exe.
 
-make sure to open a direct outbound connection if you intend to run the tool in a restricted environment: allow connections at least to following URL's
+Make sure to open a direct outbound connection if you intend to run the tool in a restricted environment: allow connections at least to following URL's
 http://timestamp.digicert.com
 http://timestamp.sectigo.com
 http://timestamp.acs.microsoft.com
