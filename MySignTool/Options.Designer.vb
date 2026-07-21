@@ -75,7 +75,7 @@ Partial Class Options
         'rtbPowerShell
         '
         Me.rtbPowerShell.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbPowerShell.Location = New System.Drawing.Point(175, 49)
+        Me.rtbPowerShell.Location = New System.Drawing.Point(175, 63)
         Me.rtbPowerShell.Name = "rtbPowerShell"
         Me.rtbPowerShell.ReadOnly = True
         Me.rtbPowerShell.Size = New System.Drawing.Size(299, 21)
@@ -85,7 +85,7 @@ Partial Class Options
         'rtbApplications
         '
         Me.rtbApplications.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbApplications.Location = New System.Drawing.Point(175, 76)
+        Me.rtbApplications.Location = New System.Drawing.Point(175, 102)
         Me.rtbApplications.Name = "rtbApplications"
         Me.rtbApplications.ReadOnly = True
         Me.rtbApplications.Size = New System.Drawing.Size(299, 21)
@@ -108,7 +108,7 @@ Partial Class Options
         Me.lblPowerShell.AutoSize = True
         Me.lblPowerShell.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPowerShell.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblPowerShell.Location = New System.Drawing.Point(12, 46)
+        Me.lblPowerShell.Location = New System.Drawing.Point(25, 66)
         Me.lblPowerShell.Name = "lblPowerShell"
         Me.lblPowerShell.Size = New System.Drawing.Size(127, 13)
         Me.lblPowerShell.TabIndex = 5
@@ -119,7 +119,7 @@ Partial Class Options
         Me.lblExecutables.AutoSize = True
         Me.lblExecutables.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblExecutables.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblExecutables.Location = New System.Drawing.Point(43, 73)
+        Me.lblExecutables.Location = New System.Drawing.Point(56, 105)
         Me.lblExecutables.Name = "lblExecutables"
         Me.lblExecutables.Size = New System.Drawing.Size(96, 13)
         Me.lblExecutables.TabIndex = 7
@@ -130,7 +130,7 @@ Partial Class Options
         Me.lblMSIFiles.AutoSize = True
         Me.lblMSIFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMSIFiles.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblMSIFiles.Location = New System.Drawing.Point(62, 104)
+        Me.lblMSIFiles.Location = New System.Drawing.Point(72, 147)
         Me.lblMSIFiles.Name = "lblMSIFiles"
         Me.lblMSIFiles.Size = New System.Drawing.Size(82, 13)
         Me.lblMSIFiles.TabIndex = 8
@@ -139,7 +139,7 @@ Partial Class Options
         'rtbMSIFiles
         '
         Me.rtbMSIFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbMSIFiles.Location = New System.Drawing.Point(176, 104)
+        Me.rtbMSIFiles.Location = New System.Drawing.Point(175, 144)
         Me.rtbMSIFiles.Name = "rtbMSIFiles"
         Me.rtbMSIFiles.ReadOnly = True
         Me.rtbMSIFiles.Size = New System.Drawing.Size(299, 21)
@@ -157,7 +157,7 @@ Partial Class Options
         '
         'btnBrowsePS1
         '
-        Me.btnBrowsePS1.Location = New System.Drawing.Point(515, 43)
+        Me.btnBrowsePS1.Location = New System.Drawing.Point(516, 60)
         Me.btnBrowsePS1.Name = "btnBrowsePS1"
         Me.btnBrowsePS1.Size = New System.Drawing.Size(104, 25)
         Me.btnBrowsePS1.TabIndex = 2
@@ -166,7 +166,7 @@ Partial Class Options
         '
         'btnBrowseEXE
         '
-        Me.btnBrowseEXE.Location = New System.Drawing.Point(515, 73)
+        Me.btnBrowseEXE.Location = New System.Drawing.Point(516, 99)
         Me.btnBrowseEXE.Name = "btnBrowseEXE"
         Me.btnBrowseEXE.Size = New System.Drawing.Size(104, 25)
         Me.btnBrowseEXE.TabIndex = 4
@@ -175,7 +175,7 @@ Partial Class Options
         '
         'btnBrowseMSI
         '
-        Me.btnBrowseMSI.Location = New System.Drawing.Point(516, 104)
+        Me.btnBrowseMSI.Location = New System.Drawing.Point(515, 141)
         Me.btnBrowseMSI.Name = "btnBrowseMSI"
         Me.btnBrowseMSI.Size = New System.Drawing.Size(104, 25)
         Me.btnBrowseMSI.TabIndex = 5
@@ -186,7 +186,7 @@ Partial Class Options
         '
         Me.lblSaveSettings.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblSaveSettings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblSaveSettings.Location = New System.Drawing.Point(500, 421)
+        Me.lblSaveSettings.Location = New System.Drawing.Point(500, 528)
         Me.lblSaveSettings.Name = "lblSaveSettings"
         Me.lblSaveSettings.Size = New System.Drawing.Size(120, 30)
         Me.lblSaveSettings.TabIndex = 9
@@ -198,7 +198,7 @@ Partial Class Options
         Me.lblCertificateFile.AutoSize = True
         Me.lblCertificateFile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCertificateFile.ForeColor = System.Drawing.Color.ForestGreen
-        Me.lblCertificateFile.Location = New System.Drawing.Point(69, 294)
+        Me.lblCertificateFile.Location = New System.Drawing.Point(75, 360)
         Me.lblCertificateFile.Name = "lblCertificateFile"
         Me.lblCertificateFile.Size = New System.Drawing.Size(77, 13)
         Me.lblCertificateFile.TabIndex = 16
@@ -209,7 +209,7 @@ Partial Class Options
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.ForestGreen
-        Me.lblPassword.Location = New System.Drawing.Point(31, 334)
+        Me.lblPassword.Location = New System.Drawing.Point(42, 411)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(110, 13)
         Me.lblPassword.TabIndex = 17
@@ -218,7 +218,7 @@ Partial Class Options
         'rtbCertificateFileName
         '
         Me.rtbCertificateFileName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbCertificateFileName.Location = New System.Drawing.Point(177, 291)
+        Me.rtbCertificateFileName.Location = New System.Drawing.Point(175, 357)
         Me.rtbCertificateFileName.Name = "rtbCertificateFileName"
         Me.rtbCertificateFileName.ReadOnly = True
         Me.rtbCertificateFileName.Size = New System.Drawing.Size(299, 21)
@@ -227,7 +227,7 @@ Partial Class Options
         '
         'btnCertificatefileName
         '
-        Me.btnCertificatefileName.Location = New System.Drawing.Point(516, 288)
+        Me.btnCertificatefileName.Location = New System.Drawing.Point(515, 354)
         Me.btnCertificatefileName.Name = "btnCertificatefileName"
         Me.btnCertificatefileName.Size = New System.Drawing.Size(104, 25)
         Me.btnCertificatefileName.TabIndex = 6
@@ -236,7 +236,7 @@ Partial Class Options
         '
         'btnPasswordSave
         '
-        Me.btnPasswordSave.Location = New System.Drawing.Point(516, 328)
+        Me.btnPasswordSave.Location = New System.Drawing.Point(516, 405)
         Me.btnPasswordSave.Name = "btnPasswordSave"
         Me.btnPasswordSave.Size = New System.Drawing.Size(104, 25)
         Me.btnPasswordSave.TabIndex = 7
@@ -251,7 +251,7 @@ Partial Class Options
         '
         Me.btnCancel.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(35, 421)
+        Me.btnCancel.Location = New System.Drawing.Point(34, 528)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(120, 30)
         Me.btnCancel.TabIndex = 0
@@ -263,7 +263,7 @@ Partial Class Options
         Me.lblTimeStampURL.AutoSize = True
         Me.lblTimeStampURL.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTimeStampURL.ForeColor = System.Drawing.Color.ForestGreen
-        Me.lblTimeStampURL.Location = New System.Drawing.Point(63, 371)
+        Me.lblTimeStampURL.Location = New System.Drawing.Point(69, 469)
         Me.lblTimeStampURL.Name = "lblTimeStampURL"
         Me.lblTimeStampURL.Size = New System.Drawing.Size(83, 13)
         Me.lblTimeStampURL.TabIndex = 23
@@ -272,7 +272,7 @@ Partial Class Options
         'rtbTimeStampURL
         '
         Me.rtbTimeStampURL.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbTimeStampURL.Location = New System.Drawing.Point(177, 368)
+        Me.rtbTimeStampURL.Location = New System.Drawing.Point(175, 461)
         Me.rtbTimeStampURL.Multiline = False
         Me.rtbTimeStampURL.Name = "rtbTimeStampURL"
         Me.rtbTimeStampURL.Size = New System.Drawing.Size(299, 21)
@@ -281,7 +281,7 @@ Partial Class Options
         '
         'btnTimeStampURL
         '
-        Me.btnTimeStampURL.Location = New System.Drawing.Point(516, 365)
+        Me.btnTimeStampURL.Location = New System.Drawing.Point(516, 458)
         Me.btnTimeStampURL.Name = "btnTimeStampURL"
         Me.btnTimeStampURL.Size = New System.Drawing.Size(104, 25)
         Me.btnTimeStampURL.TabIndex = 8
@@ -292,7 +292,7 @@ Partial Class Options
         '
         Me.btnRestoreDefaults.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.btnRestoreDefaults.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnRestoreDefaults.Location = New System.Drawing.Point(178, 421)
+        Me.btnRestoreDefaults.Location = New System.Drawing.Point(176, 528)
         Me.btnRestoreDefaults.Name = "btnRestoreDefaults"
         Me.btnRestoreDefaults.Size = New System.Drawing.Size(120, 30)
         Me.btnRestoreDefaults.TabIndex = 25
@@ -303,7 +303,7 @@ Partial Class Options
         '
         Me.lblCertWarning.AutoSize = True
         Me.lblCertWarning.ForeColor = System.Drawing.Color.Red
-        Me.lblCertWarning.Location = New System.Drawing.Point(178, 270)
+        Me.lblCertWarning.Location = New System.Drawing.Point(173, 330)
         Me.lblCertWarning.Name = "lblCertWarning"
         Me.lblCertWarning.Size = New System.Drawing.Size(76, 13)
         Me.lblCertWarning.TabIndex = 26
@@ -311,10 +311,10 @@ Partial Class Options
         '
         'tbPassword
         '
-        Me.tbPassword.Location = New System.Drawing.Point(177, 331)
+        Me.tbPassword.Location = New System.Drawing.Point(175, 408)
         Me.tbPassword.Name = "tbPassword"
         Me.tbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbPassword.Size = New System.Drawing.Size(135, 20)
+        Me.tbPassword.Size = New System.Drawing.Size(206, 20)
         Me.tbPassword.TabIndex = 27
         '
         'lblWarning
@@ -328,7 +328,7 @@ Partial Class Options
         '
         'btnBrowseCAB
         '
-        Me.btnBrowseCAB.Location = New System.Drawing.Point(515, 135)
+        Me.btnBrowseCAB.Location = New System.Drawing.Point(515, 186)
         Me.btnBrowseCAB.Name = "btnBrowseCAB"
         Me.btnBrowseCAB.Size = New System.Drawing.Size(104, 25)
         Me.btnBrowseCAB.TabIndex = 29
@@ -338,7 +338,7 @@ Partial Class Options
         'rtbCABFiles
         '
         Me.rtbCABFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbCABFiles.Location = New System.Drawing.Point(175, 135)
+        Me.rtbCABFiles.Location = New System.Drawing.Point(175, 189)
         Me.rtbCABFiles.Name = "rtbCABFiles"
         Me.rtbCABFiles.ReadOnly = True
         Me.rtbCABFiles.Size = New System.Drawing.Size(299, 21)
@@ -350,7 +350,7 @@ Partial Class Options
         Me.lblCABFiles.AutoSize = True
         Me.lblCABFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCABFiles.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblCABFiles.Location = New System.Drawing.Point(60, 135)
+        Me.lblCABFiles.Location = New System.Drawing.Point(70, 192)
         Me.lblCABFiles.Name = "lblCABFiles"
         Me.lblCABFiles.Size = New System.Drawing.Size(84, 13)
         Me.lblCABFiles.TabIndex = 30
@@ -359,7 +359,7 @@ Partial Class Options
         'btnBrowsePDF
         '
         Me.btnBrowsePDF.Enabled = False
-        Me.btnBrowsePDF.Location = New System.Drawing.Point(515, 197)
+        Me.btnBrowsePDF.Location = New System.Drawing.Point(515, 272)
         Me.btnBrowsePDF.Name = "btnBrowsePDF"
         Me.btnBrowsePDF.Size = New System.Drawing.Size(104, 25)
         Me.btnBrowsePDF.TabIndex = 32
@@ -372,7 +372,7 @@ Partial Class Options
         Me.lblPDFFiles.AutoSize = True
         Me.lblPDFFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPDFFiles.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblPDFFiles.Location = New System.Drawing.Point(57, 192)
+        Me.lblPDFFiles.Location = New System.Drawing.Point(68, 278)
         Me.lblPDFFiles.Name = "lblPDFFiles"
         Me.lblPDFFiles.Size = New System.Drawing.Size(84, 13)
         Me.lblPDFFiles.TabIndex = 33
@@ -383,7 +383,7 @@ Partial Class Options
         'rtbPDFFiles
         '
         Me.rtbPDFFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbPDFFiles.Location = New System.Drawing.Point(175, 192)
+        Me.rtbPDFFiles.Location = New System.Drawing.Point(175, 275)
         Me.rtbPDFFiles.Name = "rtbPDFFiles"
         Me.rtbPDFFiles.ReadOnly = True
         Me.rtbPDFFiles.Size = New System.Drawing.Size(299, 21)
@@ -396,7 +396,7 @@ Partial Class Options
         Me.lblRDPFiles.AutoSize = True
         Me.lblRDPFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRDPFiles.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblRDPFiles.Location = New System.Drawing.Point(53, 162)
+        Me.lblRDPFiles.Location = New System.Drawing.Point(66, 235)
         Me.lblRDPFiles.Name = "lblRDPFiles"
         Me.lblRDPFiles.Size = New System.Drawing.Size(86, 13)
         Me.lblRDPFiles.TabIndex = 35
@@ -406,7 +406,7 @@ Partial Class Options
         'rtbRDPFiles
         '
         Me.rtbRDPFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbRDPFiles.Location = New System.Drawing.Point(175, 162)
+        Me.rtbRDPFiles.Location = New System.Drawing.Point(175, 232)
         Me.rtbRDPFiles.Name = "rtbRDPFiles"
         Me.rtbRDPFiles.ReadOnly = True
         Me.rtbRDPFiles.Size = New System.Drawing.Size(299, 21)
@@ -415,7 +415,7 @@ Partial Class Options
         '
         'btnBrowseRDP
         '
-        Me.btnBrowseRDP.Location = New System.Drawing.Point(515, 166)
+        Me.btnBrowseRDP.Location = New System.Drawing.Point(515, 229)
         Me.btnBrowseRDP.Name = "btnBrowseRDP"
         Me.btnBrowseRDP.Size = New System.Drawing.Size(104, 25)
         Me.btnBrowseRDP.TabIndex = 37
@@ -428,7 +428,7 @@ Partial Class Options
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(708, 473)
+        Me.ClientSize = New System.Drawing.Size(684, 611)
         Me.Controls.Add(Me.btnBrowseRDP)
         Me.Controls.Add(Me.rtbRDPFiles)
         Me.Controls.Add(Me.lblRDPFiles)

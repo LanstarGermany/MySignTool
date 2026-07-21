@@ -115,6 +115,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -189,6 +192,7 @@
     <Compile Include="Options.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PdfSigner.vb" />
     <Compile Include="rdpsign.vb" />
     <Compile Include="SelectQuery.vb" />
     <Compile Include="Sign.vb" />
@@ -257,6 +261,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\certificate.ico" />
   </ItemGroup>
   <ItemGroup>
