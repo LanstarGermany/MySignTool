@@ -365,7 +365,6 @@ Partial Class Options
         Me.btnBrowsePDF.TabIndex = 32
         Me.btnBrowsePDF.Text = "Browse"
         Me.btnBrowsePDF.UseVisualStyleBackColor = True
-        Me.btnBrowsePDF.Visible = False
         '
         'lblPDFFiles
         '
@@ -378,7 +377,6 @@ Partial Class Options
         Me.lblPDFFiles.TabIndex = 33
         Me.lblPDFFiles.Text = "PDF Files Folder"
         Me.lblPDFFiles.UseMnemonic = False
-        Me.lblPDFFiles.Visible = False
         '
         'rtbPDFFiles
         '
@@ -388,8 +386,7 @@ Partial Class Options
         Me.rtbPDFFiles.ReadOnly = True
         Me.rtbPDFFiles.Size = New System.Drawing.Size(299, 21)
         Me.rtbPDFFiles.TabIndex = 34
-        Me.rtbPDFFiles.Text = "coming soon"
-        Me.rtbPDFFiles.Visible = False
+        Me.rtbPDFFiles.Text = ""
         '
         'lblRDPFiles
         '

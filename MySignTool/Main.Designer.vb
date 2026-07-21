@@ -65,6 +65,7 @@ Partial Class Main
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblPercentage = New System.Windows.Forms.Label()
         Me.lblInstallWarning = New System.Windows.Forms.Label()
+        Me.PDFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -103,26 +104,26 @@ Partial Class Main
         '
         Me.VBScriptFilesToolStripMenuItem.Image = CType(resources.GetObject("VBScriptFilesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.VBScriptFilesToolStripMenuItem.Name = "VBScriptFilesToolStripMenuItem"
-        Me.VBScriptFilesToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.VBScriptFilesToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.VBScriptFilesToolStripMenuItem.Text = "VBScript Files"
         '
         'PowerShellFilesToolStripMenuItem
         '
         Me.PowerShellFilesToolStripMenuItem.Image = CType(resources.GetObject("PowerShellFilesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PowerShellFilesToolStripMenuItem.Name = "PowerShellFilesToolStripMenuItem"
-        Me.PowerShellFilesToolStripMenuItem.Size = New System.Drawing.Size(191, 26)
+        Me.PowerShellFilesToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.PowerShellFilesToolStripMenuItem.Text = "PowerShell Files"
         '
         'RDPFilesToolStripMenuItem2
         '
         Me.RDPFilesToolStripMenuItem2.Image = Global.SignTool.My.Resources.Resources.lock
         Me.RDPFilesToolStripMenuItem2.Name = "RDPFilesToolStripMenuItem2"
-        Me.RDPFilesToolStripMenuItem2.Size = New System.Drawing.Size(191, 26)
+        Me.RDPFilesToolStripMenuItem2.Size = New System.Drawing.Size(187, 22)
         Me.RDPFilesToolStripMenuItem2.Text = "RDP Connection Files"
         '
         'SignFilesToolStripMenuItem
         '
-        Me.SignFilesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EXEToolStripMenuItem, Me.MSIToolStripMenuItem, Me.CABToolStripMenuItem})
+        Me.SignFilesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EXEToolStripMenuItem, Me.MSIToolStripMenuItem, Me.CABToolStripMenuItem, Me.PDFToolStripMenuItem})
         Me.SignFilesToolStripMenuItem.Name = "SignFilesToolStripMenuItem"
         Me.SignFilesToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
         Me.SignFilesToolStripMenuItem.Text = "Applications"
@@ -131,21 +132,21 @@ Partial Class Main
         '
         Me.EXEToolStripMenuItem.Image = CType(resources.GetObject("EXEToolStripMenuItem.Image"), System.Drawing.Image)
         Me.EXEToolStripMenuItem.Name = "EXEToolStripMenuItem"
-        Me.EXEToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
+        Me.EXEToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
         Me.EXEToolStripMenuItem.Text = "EXE"
         '
         'MSIToolStripMenuItem
         '
         Me.MSIToolStripMenuItem.Image = CType(resources.GetObject("MSIToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MSIToolStripMenuItem.Name = "MSIToolStripMenuItem"
-        Me.MSIToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
+        Me.MSIToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
         Me.MSIToolStripMenuItem.Text = "MSI"
         '
         'CABToolStripMenuItem
         '
         Me.CABToolStripMenuItem.Image = Global.SignTool.My.Resources.Resources.directory
         Me.CABToolStripMenuItem.Name = "CABToolStripMenuItem"
-        Me.CABToolStripMenuItem.Size = New System.Drawing.Size(97, 22)
+        Me.CABToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
         Me.CABToolStripMenuItem.Text = "CAB"
         '
         'ToolsToolStripMenuItem
@@ -445,6 +446,13 @@ Partial Class Main
         Me.lblInstallWarning.Size = New System.Drawing.Size(0, 29)
         Me.lblInstallWarning.TabIndex = 26
         '
+        'PDFToolStripMenuItem
+        '
+        Me.PDFToolStripMenuItem.Image = Global.SignTool.My.Resources.Resources.lock
+        Me.PDFToolStripMenuItem.Name = "PDFToolStripMenuItem"
+        Me.PDFToolStripMenuItem.Size = New System.Drawing.Size(184, 26)
+        Me.PDFToolStripMenuItem.Text = "PDF"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -529,4 +537,5 @@ Partial Class Main
     Friend WithEvents CreateSelfsignedCertificateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents lblInstallWarning As System.Windows.Forms.Label
     Friend WithEvents RDPFilesToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents PDFToolStripMenuItem As ToolStripMenuItem
 End Class

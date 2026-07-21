@@ -293,6 +293,10 @@ Public Class Options
         If folderExists = False Then
             My.Computer.FileSystem.CreateDirectory("C:\soft\Signing\PDF_Files")
         End If
+        folderExists = My.Computer.FileSystem.DirectoryExists("C:\soft\Signing\PDF-Files-signed")
+        If folderExists = False Then
+            My.Computer.FileSystem.CreateDirectory("C:\soft\Signing\PDF-Files-signed")
+        End If
         btnTimeStampURL.PerformClick()
         btnBrowseEXE.ForeColor = Color.Green
         btnBrowseEXE.BackColor = Color.GhostWhite

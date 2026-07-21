@@ -75,6 +75,7 @@ Public Class Main
     'Private zInetCheckURL As String = "http://timestamp.digicert.com" 'this URL can't be checked as it does not give a response to a normal web check
     Private zInetCheckURL As String = "http://www.msftconnecttest.com/connecttest.txt"
     Private zLicenseString As String = "(free version)"
+    Private zDestPDFFolder As String = "C:\soft\Signing\PDF-Files-signed\"
 
 
 
@@ -461,6 +462,17 @@ Public Class Main
     End Sub
 
 
+    Private Sub PDFToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PDFToolStripMenuItem.Click
+        lblCurrentDirectory.Text = "current:"
+        btnSingleFile.Enabled = False
+        zSelectedDirectory = zLocPDFFiles
+        lblCurrentDirectory.Text += " " & zLocPDFFiles
+        zFileExtension = "pdf"
+        listFiles()
+        btnClearListSelected.PerformClick()
+    End Sub
+
+
     Private Sub MSIToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MSIToolStripMenuItem.Click
         lblCurrentDirectory.Text = "current:"
         btnSingleFile.Enabled = False
@@ -529,23 +541,38 @@ Public Class Main
                 System.Threading.Thread.Sleep(300)
 
                 ' new--------------------------------------------------------------------
-                'check extension of selected file 18.07.2026
+                'check extension of selected file 21.07.2026
                 ' Extract the extension and check it (ignoring casing)
-                ' rdp signing uses a different method
-                If Path.GetExtension(zSelectedFile).ToLowerInvariant() = ".rdp" Then
-                    ' Run the sub routine
-                    'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
-                    zSelectedRDPFile = zLocRDPFiles & "\" & zSelectedFile
-                    RdpSigner.SignRdpWithRegistryPfx(zSelectedRDPFile, zDecryptedPassword, zLogfile, zErrorLogfile)
+                Dim extension As String = Path.GetExtension(zSelectedFile).ToLowerInvariant()
+                Select Case extension
+                    Case ".rdp"
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        zSelectedRDPFile = zLocRDPFiles & "\" & zSelectedFile
+                        RdpSigner.SignRdpWithRegistryPfx(zSelectedRDPFile, zDecryptedPassword, zLogfile, zErrorLogfile)
+                    Case ".pdf"
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        Dim DestPDF = zDestPDFFolder & zSelectedFile
+                        Dim OriginPDF = zLocPDFFiles & "\" & zSelectedFile
+                        PdfSigner.SignPdf(OriginPDF, DestPDF, zCertificateFileName, zDecryptedPassword, zErrorLogfile, zLogfile)
+                    Case Else
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        AddSignature()
+                End Select
 
-                Else
-                    ' Show the message box with the file name
-                    'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
-                    AddSignature()
+                'If Path.GetExtension(zSelectedFile).ToLowerInvariant() = ".rdp" Then
+                ' Run the sub routine
+                'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                'zSelectedRDPFile = zLocRDPFiles & "\" & zSelectedFile
+                'RdpSigner.SignRdpWithRegistryPfx(zSelectedRDPFile, zDecryptedPassword, zLogfile, zErrorLogfile)
 
-                    ' Or if you are writing a Console application, use:
-                    ' Console.WriteLine($"Selected file: {Path.GetFileName(zSelectedFile)}")
-                End If
+                'Else
+                ' Show the message box with the file name
+                'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                'AddSignature()
+
+                ' Or if you are writing a Console application, use:
+                ' Console.WriteLine($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                'End If
                 'new end -----------------------------------------------------------------
 
                 lblPercentage.Text = Percent(i + 1, itemsCount) & " % completed"

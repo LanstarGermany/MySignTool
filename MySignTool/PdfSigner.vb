@@ -22,6 +22,8 @@ Public Class PdfSigner
                              destPdf As String,
                              pfxPath As String,
                              pfxPassword As String,
+                             errorlog As String,
+                             log As String,
                              Optional reason As String = "Document Approval",
                              Optional location As String = "Office")
 
@@ -37,6 +39,7 @@ Public Class PdfSigner
         Next
 
         If String.IsNullOrEmpty(certAlias) Then
+            My.Computer.FileSystem.WriteAllText(errorlog, "PDFSigner: No private key found in the certificate file" & vbCrLf, True)
             Throw New Exception("No private key found in the certificate file.")
         End If
 
@@ -83,6 +86,7 @@ Public Class PdfSigner
                 )
             End Using
         End Using
+        My.Computer.FileSystem.WriteAllText(log, "PDFSigner: " & destPdf & " signed successfully" & vbCrLf, True)
     End Sub
 
 End Class
