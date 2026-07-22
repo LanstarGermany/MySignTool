@@ -52,29 +52,34 @@ Public Class PdfSigner
             x509Chain(i) = chain(i).Certificate
         Next
 
-        ' 2. Read input PDF and setup the Stamper for signing
-        Using reader As New PdfReader(srcPdf)
-            Using outputStream As New FileStream(destPdf, FileMode.Create, FileAccess.Write)
+        Try
+            ' 2. Read input PDF and setup the Stamper for signing
+            Using reader As New PdfReader(srcPdf)
+                Using outputStream As New FileStream(destPdf, FileMode.Create, FileAccess.Write)
 
-                ' Create the signing stamper (the 'True' argument enables incremental updates)
-                Dim stamper As PdfStamper = PdfStamper.CreateSignature(reader, outputStream, "0"c, Nothing, True)
-                Dim appearance As PdfSignatureAppearance = stamper.SignatureAppearance
+                    'MessageBox.Show(
+                    '    "Encrypted: " & reader.IsEncrypted().ToString(),
+                    '    "PDF Information")
 
-                ' Configure metadata shown in signature details
-                appearance.Reason = reason
-                appearance.Location = location
+                    ' Create the signing stamper (the 'True' argument enables incremental updates)
+                    Dim stamper As PdfStamper = PdfStamper.CreateSignature(reader, outputStream, "0"c, Nothing, True)
+                    Dim appearance As PdfSignatureAppearance = stamper.SignatureAppearance
 
-                ' Option A: Invisible Signature (Default)
-                ' No additional lines needed.
+                    ' Configure metadata shown in signature details
+                    appearance.Reason = reason
+                    appearance.Location = location
 
-                ' Option B: Visible Signature (Uncomment lines below if you want a visible box)
-                ' Dim rect As New iTextSharp.text.Rectangle(36, 36, 200, 100) ' X, Y, Width, Height
-                ' appearance.SetVisibleSignature(rect, 1, "SignatureField") ' Page 1
+                    ' Option A: Invisible Signature (Default)
+                    ' No additional lines needed.
 
-                ' 3. Create the Signature Standard (Detached PKCS#7 / CMS)
-                Dim externalSignature As IExternalSignature = New PrivateKeySignature(pk, DigestAlgorithms.SHA256)
+                    ' Option B: Visible Signature (Uncomment lines below if you want a visible box)
+                    ' Dim rect As New iTextSharp.text.Rectangle(36, 36, 200, 100) ' X, Y, Width, Height
+                    ' appearance.SetVisibleSignature(rect, 1, "SignatureField") ' Page 1
 
-                MakeSignature.SignDetached(
+                    ' 3. Create the Signature Standard (Detached PKCS#7 / CMS)
+                    Dim externalSignature As IExternalSignature = New PrivateKeySignature(pk, DigestAlgorithms.SHA256)
+
+                    MakeSignature.SignDetached(
                     appearance,
                     externalSignature,
                     x509Chain,
@@ -84,9 +89,13 @@ Public Class PdfSigner
                     0,
                     CryptoStandard.CMS
                 )
+                End Using
             End Using
-        End Using
-        My.Computer.FileSystem.WriteAllText(log, "PDFSigner: " & destPdf & " signed successfully" & vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(log, "PDFSigner: " & destPdf & " signed successfully" & vbCrLf, True)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+            My.Computer.FileSystem.WriteAllText(errorlog, "PDFSigner: " & destPdf & " " & ex.Message & vbCrLf, True)
+        End Try
     End Sub
 
 End Class

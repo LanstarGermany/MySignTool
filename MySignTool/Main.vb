@@ -3,8 +3,8 @@
 '
 ' Author:		        Rainer Koch
 ' Date created:	     	March 12, 2013
-' Date modified:     	July 17,  2026
-' Version:              1.0.0.6
+' Date modified:     	July 21, 2026
+' Version:              1.0.0.7
 ' Remarks:              this version does not check AD for group membership, see var zTestmode
 '
 
@@ -527,7 +527,6 @@ Public Class Main
         lblProgressError.Text = ""
         zErrorCount = 0
 
-
         My.Computer.FileSystem.WriteAllText(zLogfile, vbCrLf, True)
 
         Dim itemsCount As Integer = lbSelectedFiles.Items.Count
@@ -540,9 +539,7 @@ Public Class Main
                 lblProgress.Refresh()
                 System.Threading.Thread.Sleep(300)
 
-                ' new--------------------------------------------------------------------
-                'check extension of selected file 21.07.2026
-                ' Extract the extension and check it (ignoring casing)
+                'check extension of selected file
                 Dim extension As String = Path.GetExtension(zSelectedFile).ToLowerInvariant()
                 Select Case extension
                     Case ".rdp"
@@ -558,22 +555,6 @@ Public Class Main
                         'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
                         AddSignature()
                 End Select
-
-                'If Path.GetExtension(zSelectedFile).ToLowerInvariant() = ".rdp" Then
-                ' Run the sub routine
-                'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
-                'zSelectedRDPFile = zLocRDPFiles & "\" & zSelectedFile
-                'RdpSigner.SignRdpWithRegistryPfx(zSelectedRDPFile, zDecryptedPassword, zLogfile, zErrorLogfile)
-
-                'Else
-                ' Show the message box with the file name
-                'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
-                'AddSignature()
-
-                ' Or if you are writing a Console application, use:
-                ' Console.WriteLine($"Selected file: {Path.GetFileName(zSelectedFile)}")
-                'End If
-                'new end -----------------------------------------------------------------
 
                 lblPercentage.Text = Percent(i + 1, itemsCount) & " % completed"
                 SigninProgress = True
