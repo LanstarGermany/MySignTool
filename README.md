@@ -43,3 +43,7 @@ Supported file extensions can be signed:
 * .scr
 * .sys
 * .xaml
+
+be aware that signed RDP connection files do not have a timestamp, hence the signature will be not valid when the certificate is expired, then they must be signed again.
+PDF files are stored in folder C:\soft\Signing\PDF-Files-signed after they have been signed.
+
