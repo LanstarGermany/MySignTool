@@ -20,9 +20,11 @@ Supported file extensions can be signed:
 * .application
 * .appx
 * .appxbundle
+* .bat
 * .cab
 * .cat
 * .cdxml
+* .cmd
 * .cpl
 * .dll
 * .exe
