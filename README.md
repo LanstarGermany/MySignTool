@@ -1,7 +1,7 @@
 This All-in-One GUI application makes it easy to sign all kind of scripts, executables, PDF documents, RDP connection files as well as all known Office documents like Word, Excel, Powerpoint and Visio.
 Signing Microsoft Office documents even do not require an Office installion.
 
-Why this application? I wrote it because code signing requires a completely different approach for each file type. The result is this program:
+Why this application? I wrote it because code signing requires a completely different approach for each file type. The result is this program: It combines all possible approaches within a single tool.
 
 Select the folders with the files you want to get signed and run the code-signing process.
 Ideal for people who know what code signing is, but don’t know how to put it into practice with all different types and procedures.
