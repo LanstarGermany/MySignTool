@@ -1,4 +1,5 @@
-This GUI application makes it easy to sign all kind of scripts, executables, PDF documents, RDP connection files...
+This GUI application makes it easy to sign all kind of scripts, executables, PDF documents, RDP connection files as well as all known Office documents like Word, Excel, Powerpoint and Visio...
+
 Select the folders with the files you want to get signed and run the code-signing process.
 Ideal for people who know what code signing is, but don’t know how to put it into practice.
 
@@ -27,6 +28,8 @@ Supported file extensions can be signed:
 * .cmd
 * .cpl
 * .dll
+* .docx
+* .dotx
 * .exe
 * .manifest
 * .msi
@@ -40,11 +43,14 @@ Supported file extensions can be signed:
 * .ps1xml
 * .psd1
 * .psm1
+* .pptx
 * .pssc
 * .rdp
 * .scr
 * .sys
+* .vsdx
 * .xaml
+* .xlsx
 
 be aware that signed RDP connection files do not have a timestamp, hence the signature will be not valid when the certificate is expired, then they must be signed again.
 PDF files are stored in folder C:\soft\Signing\PDF-Files-signed after they have been signed.
