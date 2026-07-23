@@ -1,13 +1,26 @@
 ﻿'
-' Name:			Digital Signatures Tool
+' Name:	        		Digital Signatures Tool
 '
 ' Author:		        Rainer Koch
+' Mail address:         rainer@lanstar.de
 ' Date created:	     	March 12, 2013
-' Date modified:     	July 21, 2026
-' Version:              1.0.0.7
-' Remarks:              this version does not check AD for group membership, see var zTestmode
+' Date modified:     	July 23, 2026
 '
-
+' GITHUB URL:           https://github.com/LanstarGermany/MySignTool
+'
+' current Version:      1.0.0.7
+'
+' Version changes:
+' Date 01.01.2013       1.0.0.0 initial version
+' Date 21.07.2026       1.0.0.5 added RDP Signing
+' Date 21.07.2026       1.0.0.6 added PDF Signing
+' Date 23.07.2026       1.0.0.7 changed target .net framework from 4.0 to 4.8
+' Date 23.07.2026       1.0.0.7 added Office Document Signing (docx, xlsx, pptx, vsdx, dotx)
+'
+' Remarks: this version does not check AD for group membership, see var zTestmode
+' Free version. Published as branch MASTER on github Lanstar\Germany
+' see EULA, Instructions PDF etc.
+'
 
 
 Imports Microsoft.Win32
@@ -35,6 +48,7 @@ Public Class Main
     Public zLocApplications As String
     Public zLocMSIFiles As String
     Public zLocRDPFiles As String
+    Public zLocOfficeFiles As String
     Public zLocCABFiles As String
     Public zLocPDFFiles As String
     Public zLocTimeStampURL As String
@@ -213,6 +227,7 @@ Public Class Main
                 zLocTimeStampURL = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkTimeStampURL", "Default Value")
                 zLocCABFiles = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkCABPath", "Default Value")
                 zLocPDFFiles = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkPDFPath", "Default Value")
+                zLocOfficeFiles = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkOfficePath", "Default Value")
                 count = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "count", "Default Value")
 
             Else
@@ -251,6 +266,7 @@ Public Class Main
                 My.Computer.FileSystem.WriteAllText(zLogfile, "Applications folder : " & zLocApplications & vbCrLf, True)
                 My.Computer.FileSystem.WriteAllText(zLogfile, "MSI Files folder    : " & zLocMSIFiles & vbCrLf, True)
                 My.Computer.FileSystem.WriteAllText(zLogfile, "RDP Files folder    : " & zLocRDPFiles & vbCrLf, True)
+                My.Computer.FileSystem.WriteAllText(zLogfile, "Office Files folder : " & zLocOfficeFiles & vbCrLf, True)
                 My.Computer.FileSystem.WriteAllText(zLogfile, "Certificate File    : " & zCertificateFileName & vbCrLf, True)
                 My.Computer.FileSystem.WriteAllText(zLogfile, "Timestamp URL       : " & zLocTimeStampURL & vbCrLf, True)
                 My.Computer.FileSystem.WriteAllText(zLogfile, "Version             : " & My.Application.Info.Version.ToString & vbCrLf, True)
@@ -265,6 +281,7 @@ Public Class Main
             My.Computer.FileSystem.WriteAllText(zLogfile, "Applications folder : " & zLocApplications & vbCrLf, True)
             My.Computer.FileSystem.WriteAllText(zLogfile, "MSI Files folder    : " & zLocMSIFiles & vbCrLf, True)
             My.Computer.FileSystem.WriteAllText(zLogfile, "RDP Files folder    : " & zLocRDPFiles & vbCrLf, True)
+            My.Computer.FileSystem.WriteAllText(zLogfile, "Office Files folder : " & zLocOfficeFiles & vbCrLf, True)
             My.Computer.FileSystem.WriteAllText(zLogfile, "Certificate File    : " & zCertificateFileName & vbCrLf, True)
             My.Computer.FileSystem.WriteAllText(zLogfile, "Timestamp URL       : " & zLocTimeStampURL & vbCrLf, True)
             My.Computer.FileSystem.WriteAllText(zLogfile, "Version             : " & My.Application.Info.Version.ToString & vbCrLf, True)
@@ -551,7 +568,22 @@ Public Class Main
                         Dim DestPDF = zDestPDFFolder & zSelectedFile
                         Dim OriginPDF = zLocPDFFiles & "\" & zSelectedFile
                         PdfSigner.SignPdf(OriginPDF, DestPDF, zCertificateFileName, zDecryptedPassword, zErrorLogfile, zLogfile)
-                    Case Else
+                    Case ".docx"
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        'PdfSigner.SignPdf(OriginPDF, DestPDF, zCertificateFileName, zDecryptedPassword, zErrorLogfile, zLogfile)
+                    Case ".xlsx"
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        'PdfSigner.SignPdf(OriginPDF, DestPDF, zCertificateFileName, zDecryptedPassword, zErrorLogfile, zLogfile)
+                    Case ".pptx"
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        'PdfSigner.SignPdf(OriginPDF, DestPDF, zCertificateFileName, zDecryptedPassword, zErrorLogfile, zLogfile)
+                    Case ".vsdx"
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        'PdfSigner.SignPdf(OriginPDF, DestPDF, zCertificateFileName, zDecryptedPassword, zErrorLogfile, zLogfile)
+                    Case ".dotx"
+                        'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
+                        'PdfSigner.SignPdf(OriginPDF, DestPDF, zCertificateFileName, zDecryptedPassword, zErrorLogfile, zLogfile)
+                    Case Else 'all others
                         'MessageBox.Show($"Selected file: {Path.GetFileName(zSelectedFile)}")
                         AddSignature()
                 End Select
@@ -753,11 +785,11 @@ Public Class Main
 
 
 
-    Private Sub CheckAuthorization()
+    Private Sub CheckAuthorization() 'not used in free version
         If zTestmode = False Then
             Dim aName As String = System.Security.Principal.WindowsIdentity.GetCurrent.Name
             Dim aDomain As String = aName.Substring(0, aName.IndexOf("\") + 1)
-            AppDomain.CurrentDomain.SetPrincipalPolicy( _
+            AppDomain.CurrentDomain.SetPrincipalPolicy(
                  System.Security.Principal.PrincipalPolicy.WindowsPrincipal)
             Try
                 If Not Thread.CurrentPrincipal.IsInRole(aDomain & zAccessGroup) Then

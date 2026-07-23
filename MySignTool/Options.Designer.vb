@@ -60,6 +60,9 @@ Partial Class Options
         Me.lblRDPFiles = New System.Windows.Forms.Label()
         Me.rtbRDPFiles = New System.Windows.Forms.RichTextBox()
         Me.btnBrowseRDP = New System.Windows.Forms.Button()
+        Me.lblOfficeFiles = New System.Windows.Forms.Label()
+        Me.rtbOfficeFiles = New System.Windows.Forms.RichTextBox()
+        Me.btnBrowseOffice = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'rtbVBScripts
@@ -186,7 +189,7 @@ Partial Class Options
         '
         Me.lblSaveSettings.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.lblSaveSettings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblSaveSettings.Location = New System.Drawing.Point(500, 528)
+        Me.lblSaveSettings.Location = New System.Drawing.Point(500, 545)
         Me.lblSaveSettings.Name = "lblSaveSettings"
         Me.lblSaveSettings.Size = New System.Drawing.Size(120, 30)
         Me.lblSaveSettings.TabIndex = 9
@@ -198,7 +201,7 @@ Partial Class Options
         Me.lblCertificateFile.AutoSize = True
         Me.lblCertificateFile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCertificateFile.ForeColor = System.Drawing.Color.ForestGreen
-        Me.lblCertificateFile.Location = New System.Drawing.Point(75, 360)
+        Me.lblCertificateFile.Location = New System.Drawing.Point(77, 423)
         Me.lblCertificateFile.Name = "lblCertificateFile"
         Me.lblCertificateFile.Size = New System.Drawing.Size(77, 13)
         Me.lblCertificateFile.TabIndex = 16
@@ -209,7 +212,7 @@ Partial Class Options
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.ForeColor = System.Drawing.Color.ForestGreen
-        Me.lblPassword.Location = New System.Drawing.Point(42, 411)
+        Me.lblPassword.Location = New System.Drawing.Point(44, 457)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(110, 13)
         Me.lblPassword.TabIndex = 17
@@ -218,7 +221,7 @@ Partial Class Options
         'rtbCertificateFileName
         '
         Me.rtbCertificateFileName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbCertificateFileName.Location = New System.Drawing.Point(175, 357)
+        Me.rtbCertificateFileName.Location = New System.Drawing.Point(176, 420)
         Me.rtbCertificateFileName.Name = "rtbCertificateFileName"
         Me.rtbCertificateFileName.ReadOnly = True
         Me.rtbCertificateFileName.Size = New System.Drawing.Size(299, 21)
@@ -227,7 +230,7 @@ Partial Class Options
         '
         'btnCertificatefileName
         '
-        Me.btnCertificatefileName.Location = New System.Drawing.Point(515, 354)
+        Me.btnCertificatefileName.Location = New System.Drawing.Point(516, 417)
         Me.btnCertificatefileName.Name = "btnCertificatefileName"
         Me.btnCertificatefileName.Size = New System.Drawing.Size(104, 25)
         Me.btnCertificatefileName.TabIndex = 6
@@ -236,7 +239,7 @@ Partial Class Options
         '
         'btnPasswordSave
         '
-        Me.btnPasswordSave.Location = New System.Drawing.Point(516, 405)
+        Me.btnPasswordSave.Location = New System.Drawing.Point(515, 451)
         Me.btnPasswordSave.Name = "btnPasswordSave"
         Me.btnPasswordSave.Size = New System.Drawing.Size(104, 25)
         Me.btnPasswordSave.TabIndex = 7
@@ -251,7 +254,7 @@ Partial Class Options
         '
         Me.btnCancel.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(34, 528)
+        Me.btnCancel.Location = New System.Drawing.Point(33, 545)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(120, 30)
         Me.btnCancel.TabIndex = 0
@@ -263,7 +266,7 @@ Partial Class Options
         Me.lblTimeStampURL.AutoSize = True
         Me.lblTimeStampURL.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTimeStampURL.ForeColor = System.Drawing.Color.ForestGreen
-        Me.lblTimeStampURL.Location = New System.Drawing.Point(69, 469)
+        Me.lblTimeStampURL.Location = New System.Drawing.Point(75, 490)
         Me.lblTimeStampURL.Name = "lblTimeStampURL"
         Me.lblTimeStampURL.Size = New System.Drawing.Size(83, 13)
         Me.lblTimeStampURL.TabIndex = 23
@@ -272,7 +275,7 @@ Partial Class Options
         'rtbTimeStampURL
         '
         Me.rtbTimeStampURL.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtbTimeStampURL.Location = New System.Drawing.Point(175, 461)
+        Me.rtbTimeStampURL.Location = New System.Drawing.Point(176, 487)
         Me.rtbTimeStampURL.Multiline = False
         Me.rtbTimeStampURL.Name = "rtbTimeStampURL"
         Me.rtbTimeStampURL.Size = New System.Drawing.Size(299, 21)
@@ -281,7 +284,7 @@ Partial Class Options
         '
         'btnTimeStampURL
         '
-        Me.btnTimeStampURL.Location = New System.Drawing.Point(516, 458)
+        Me.btnTimeStampURL.Location = New System.Drawing.Point(516, 484)
         Me.btnTimeStampURL.Name = "btnTimeStampURL"
         Me.btnTimeStampURL.Size = New System.Drawing.Size(104, 25)
         Me.btnTimeStampURL.TabIndex = 8
@@ -292,7 +295,7 @@ Partial Class Options
         '
         Me.btnRestoreDefaults.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.btnRestoreDefaults.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnRestoreDefaults.Location = New System.Drawing.Point(176, 528)
+        Me.btnRestoreDefaults.Location = New System.Drawing.Point(176, 545)
         Me.btnRestoreDefaults.Name = "btnRestoreDefaults"
         Me.btnRestoreDefaults.Size = New System.Drawing.Size(120, 30)
         Me.btnRestoreDefaults.TabIndex = 25
@@ -303,7 +306,7 @@ Partial Class Options
         '
         Me.lblCertWarning.AutoSize = True
         Me.lblCertWarning.ForeColor = System.Drawing.Color.Red
-        Me.lblCertWarning.Location = New System.Drawing.Point(173, 330)
+        Me.lblCertWarning.Location = New System.Drawing.Point(173, 394)
         Me.lblCertWarning.Name = "lblCertWarning"
         Me.lblCertWarning.Size = New System.Drawing.Size(76, 13)
         Me.lblCertWarning.TabIndex = 26
@@ -311,7 +314,7 @@ Partial Class Options
         '
         'tbPassword
         '
-        Me.tbPassword.Location = New System.Drawing.Point(175, 408)
+        Me.tbPassword.Location = New System.Drawing.Point(175, 454)
         Me.tbPassword.Name = "tbPassword"
         Me.tbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbPassword.Size = New System.Drawing.Size(206, 20)
@@ -419,6 +422,38 @@ Partial Class Options
         Me.btnBrowseRDP.Text = "Browse"
         Me.btnBrowseRDP.UseVisualStyleBackColor = True
         '
+        'lblOfficeFiles
+        '
+        Me.lblOfficeFiles.AutoSize = True
+        Me.lblOfficeFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOfficeFiles.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.lblOfficeFiles.Location = New System.Drawing.Point(69, 321)
+        Me.lblOfficeFiles.Name = "lblOfficeFiles"
+        Me.lblOfficeFiles.Size = New System.Drawing.Size(91, 13)
+        Me.lblOfficeFiles.TabIndex = 38
+        Me.lblOfficeFiles.Text = "Office Files Folder"
+        Me.lblOfficeFiles.UseMnemonic = False
+        '
+        'rtbOfficeFiles
+        '
+        Me.rtbOfficeFiles.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtbOfficeFiles.Location = New System.Drawing.Point(176, 318)
+        Me.rtbOfficeFiles.Name = "rtbOfficeFiles"
+        Me.rtbOfficeFiles.ReadOnly = True
+        Me.rtbOfficeFiles.Size = New System.Drawing.Size(299, 21)
+        Me.rtbOfficeFiles.TabIndex = 39
+        Me.rtbOfficeFiles.Text = ""
+        '
+        'btnBrowseOffice
+        '
+        Me.btnBrowseOffice.Enabled = False
+        Me.btnBrowseOffice.Location = New System.Drawing.Point(515, 315)
+        Me.btnBrowseOffice.Name = "btnBrowseOffice"
+        Me.btnBrowseOffice.Size = New System.Drawing.Size(104, 25)
+        Me.btnBrowseOffice.TabIndex = 40
+        Me.btnBrowseOffice.Text = "Browse"
+        Me.btnBrowseOffice.UseVisualStyleBackColor = True
+        '
         'Options
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -426,6 +461,9 @@ Partial Class Options
         Me.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(684, 611)
+        Me.Controls.Add(Me.btnBrowseOffice)
+        Me.Controls.Add(Me.rtbOfficeFiles)
+        Me.Controls.Add(Me.lblOfficeFiles)
         Me.Controls.Add(Me.btnBrowseRDP)
         Me.Controls.Add(Me.rtbRDPFiles)
         Me.Controls.Add(Me.lblRDPFiles)
@@ -509,4 +547,7 @@ Partial Class Options
     Friend WithEvents lblRDPFiles As Label
     Friend WithEvents rtbRDPFiles As RichTextBox
     Friend WithEvents btnBrowseRDP As Button
+    Friend WithEvents lblOfficeFiles As Label
+    Friend WithEvents rtbOfficeFiles As RichTextBox
+    Friend WithEvents btnBrowseOffice As Button
 End Class

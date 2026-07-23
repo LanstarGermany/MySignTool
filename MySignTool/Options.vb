@@ -87,6 +87,7 @@ Public Class Options
                 Main.zLocVBScripts = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkVBScriptPath", "Default Value")
                 Main.zLocCABFiles = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkCABPath", "Default Value")
                 Main.zLocPDFFiles = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkPDFPath", "Default Value")
+                Main.zLocOfficeFiles = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkOfficePath", "Default Value")
                 Main.zLocTimeStampURL = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkTimeStampURL", "Default Value")
             End If
             My.Computer.Registry.CurrentUser.Close()
@@ -111,6 +112,7 @@ Public Class Options
                 rtbVBScripts.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkVBScriptPath", "Default Value")
                 rtbCABFiles.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkCABPath", "Default Value")
                 rtbPDFFiles.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkPDFPath", "Default Value")
+                rtbOfficeFiles.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkOfficePath", "Default Value")
                 rtbTimeStampURL = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Software\Lanstar\SigningTool", "rkTimeStampURL", "Default Value")
                 rtbTimeStampURL.Refresh()
             End If
@@ -250,6 +252,8 @@ Public Class Options
         rtbCABFiles.Refresh()
         rtbPDFFiles.Text = "C:\soft\Signing\PDF_Files"
         rtbPDFFiles.Refresh()
+        rtbOfficeFiles.Text = "C:\soft\Signing\Office_Files"
+        rtbOfficeFiles.Refresh()
         rtbCertificateFileName.Text = "Choose Certificate"
         rtbCertificateFileName.Refresh()
         tbPassword.Text = "*******"
@@ -296,6 +300,10 @@ Public Class Options
         folderExists = My.Computer.FileSystem.DirectoryExists("C:\soft\Signing\PDF-Files-signed")
         If folderExists = False Then
             My.Computer.FileSystem.CreateDirectory("C:\soft\Signing\PDF-Files-signed")
+        End If
+        folderExists = My.Computer.FileSystem.DirectoryExists("C:\soft\Signing\Office_Files")
+        If folderExists = False Then
+            My.Computer.FileSystem.CreateDirectory("C:\soft\Signing\Office_Files")
         End If
         btnTimeStampURL.PerformClick()
         btnBrowseEXE.ForeColor = Color.Green
